@@ -1,0 +1,64 @@
+.left{
+    width: 23%;
+    height: 690px;
+    border-radius: 5px;
+    background-color: rgba(22, 23, 27, 1);
+    padding: 10px;
+}
+
+.logo img{
+    width: 8%;
+    cursor: pointer;
+}
+
+.search input{
+    background-color: rgba(35, 36, 42, 1);
+    border: none;
+    height: 30px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 6px;
+    color: white;
+}
+
+.search{
+    display: flex;
+    justify-content:    center;
+    align-items: center;
+}
+
+.alert-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+.alert{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.alert span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacts{
+    height: 80%;
+    overflow: auto;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  * {
+    scrollbar-color: #000000 transparent;
+    scrollbar-width: thin;
+    border-radius: 10px;
+  }
+
+  
