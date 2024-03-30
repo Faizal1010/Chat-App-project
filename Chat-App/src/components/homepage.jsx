@@ -4,14 +4,12 @@ import Middlebar from './Middle/middlebar.jsx'
 import './homepage.css'
 
 const homepage = () => {
-  return (
-    <div>
-        <div className='Page'>
-      <Leftbar/>
-      <Middlebar/>
-      </div>
-    </div>
-  )
+    return (
+            <div className='Page'>
+                <Leftbar />
+                <Middlebar />
+            </div>
+    )
 }
 
 export default homepage

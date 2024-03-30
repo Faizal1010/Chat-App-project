@@ -6,7 +6,6 @@ import NameCard from "./nameCard";
 
 const leftbar = () => {
   return (
-    <div>
       <div className="left">
         <div className="logo">
           <img src={viteLogo} />
@@ -38,9 +37,19 @@ const leftbar = () => {
 
         <section className="contacts">
           <NameCard />
+          <NameCard />
+          <NameCard />
+          <NameCard />
+          <NameCard />
+          <NameCard />
+          <NameCard />
+          <NameCard />
+          <NameCard />
+          <NameCard />
+          <NameCard />
+          <NameCard />
         </section>
       </div>
-    </div>
   );
 };
 
