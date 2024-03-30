@@ -1,6 +1,7 @@
 .mainmid{
     height: 704px;
     width: 55%;
+    position: relative; 
 }
 
 .heading img{
@@ -9,7 +10,39 @@
 }
 
 .heading{
+    width: 95%;
+    margin: auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.border span{
+    width: 95%;
+    height: 1px;
+    border-bottom: 1px solid grey;
+}
+
+.border{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.msg-box input{
+    min-height: 45px;
+    border: none;
+    border-radius: 10px;
+    width: 95%;
+    position: absolute;
+    bottom: 0;
+    background-color: #16171b;
+    padding: 5px 5px 5px 18px;
+}
+
+.msg-box{
+    display: flex;
+    justify-content: center;
     align-items: center;
 }

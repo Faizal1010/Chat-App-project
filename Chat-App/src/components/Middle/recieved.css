@@ -1,0 +1,28 @@
+.recieved{
+    min-height: 28px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.recieved :nth-child(3){
+    font-size: small;
+}
+
+.recieved-msg{
+    background-color: rgba(44, 46, 61, 1);
+    min-width: 30px;
+    max-width: 60%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+}
+
+.recieved img{
+    width: 40px;
+}
+
