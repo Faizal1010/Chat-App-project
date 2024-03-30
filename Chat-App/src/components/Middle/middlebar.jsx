@@ -3,7 +3,7 @@ import './middlebar.css'
 
 const middlebar = () => {
   return (
-    <div>
+    <div className='mainmid'>
       <div className="heading">
         <img src="https://www.shareicon.net/data/512x512/2016/09/15/829459_man_512x512.png" alt="" />
         <span>Andrea Mendoza</span>

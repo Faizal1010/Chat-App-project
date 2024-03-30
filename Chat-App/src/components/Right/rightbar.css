@@ -1,5 +1,6 @@
-.rigth{
-    background-color: red;
-    height: 23px;
-    width: 100px;
+.right{
+    background-color: rgba(22, 23, 27, 1);
+    height: 706px;
+    width: 22%;
+    border-radius: 5px;
 }
