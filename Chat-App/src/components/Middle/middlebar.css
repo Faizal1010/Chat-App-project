@@ -1,5 +1,15 @@
-.border{
-    background-color: green;
-    height: 100px;
-    width: 100px;
+.mainmid{
+    height: 704px;
+    width: 55%;
+}
+
+.heading img{
+    height: 50px;
+    width: 50px;
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

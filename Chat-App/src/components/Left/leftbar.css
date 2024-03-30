@@ -50,15 +50,12 @@
     overflow: auto;
 }
 
-::-webkit-scrollbar {
+.contacts::-webkit-scrollbar {
     width: 10px;
     height: 10px;
   }
 
-  * {
+ *{
     scrollbar-color: #000000 transparent;
     scrollbar-width: thin;
-    border-radius: 10px;
   }
-
-  
