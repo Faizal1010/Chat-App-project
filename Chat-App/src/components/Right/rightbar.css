@@ -21,6 +21,15 @@
     padding: 10px;
 }
 
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .plus{
     height: 40px;
     width: 40px;
@@ -64,13 +73,9 @@
     gap: 10px;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
 }
 
 .mainmediabox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     overflow-x: auto;
     height: 403px;
 }
@@ -84,10 +89,3 @@
     scrollbar-color: #000000 transparent;
     scrollbar-width: thin;
   }
-
-.media img{
-    height: 140px;
-    width: 140px;
-    border-radius: 20px;
-    object-fit: cover;
-}

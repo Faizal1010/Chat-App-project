@@ -37,17 +37,6 @@ const leftbar = () => {
 
         <section className="contacts">
           <NameCard />
-          <NameCard />
-          <NameCard />
-          <NameCard />
-          <NameCard />
-          <NameCard />
-          <NameCard />
-          <NameCard />
-          <NameCard />
-          <NameCard />
-          <NameCard />
-          <NameCard />
         </section>
       </div>
   );
