@@ -9,6 +9,14 @@
     width: 50px;
 }
 
+.call button{    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .heading{
     width: 95%;
     margin: auto;
@@ -35,14 +43,44 @@
     border: none;
     border-radius: 10px;
     width: 95%;
-    position: absolute;
-    bottom: 0;
     background-color: #16171b;
     padding: 5px 5px 5px 18px;
+    color: white;
 }
 
 .msg-box{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainmid :nth-child(6){
+    background-color: #656a7f;
+    border: none;
+    border-radius: 5px;
+    right: 8px;
+    position: absolute;
+    bottom: 12px;
+    height: 35px;
+    width: 65px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.mainmid :nth-child(5){
+    background-color: #656a7f;
+    border: none;
+    border-radius: 5px;
+    right: 76px;
+    position: absolute;
+    bottom: 12px;
+    height: 35px;
+    width: 65px;
+    cursor: pointer;
 }
