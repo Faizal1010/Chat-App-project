@@ -8,8 +8,7 @@ const leftbar = () => {
   return (
       <div className="left">
         <div className="logo">
-          <img src={viteLogo} />
-          <img src={reactLogo} />
+        <h2>Chat-APP</h2>
         </div>
 
         <div className="search">

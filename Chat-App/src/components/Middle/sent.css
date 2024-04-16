@@ -8,9 +8,9 @@
     margin-bottom: 10px;
 }
 
-/* .sent :nth-child(2){
+.sent :nth-child(2){
     font-size: small;
-} */
+}
 
 .sent-msg{
     background-color: rgba(65, 131, 215, 1);
