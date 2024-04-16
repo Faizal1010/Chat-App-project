@@ -5,7 +5,7 @@ const sent = () => {
   return (
     <div className='sent'>
 <div className="sent-msg">
-    Hii
+    lorem
 </div>
 <div className="sent-time">
     9:19 pm

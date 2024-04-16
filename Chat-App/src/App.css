@@ -7,4 +7,6 @@ body{
   background-color: rgba(32, 34, 44, 1);
   color: rgb(183, 178, 178);
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  overflow: hidden;
 }
