@@ -1,9 +1,9 @@
 .right{
     background-color: rgba(22, 23, 27, 1);
-    height: 706px;
+    height: 660px;
     width: 22%;
     border-radius: 5px;
-    /* padding: 10px; */
+    padding: 10px;
 }
 
 .profile img{
@@ -19,6 +19,7 @@
     gap: 25px;
     background-color: #20222c;
     padding: 10px;
+    border-radius: 5px;
 }
 
 .righthead button{

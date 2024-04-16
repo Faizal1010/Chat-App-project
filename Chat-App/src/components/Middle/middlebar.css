@@ -1,5 +1,5 @@
 .mainmid{
-    height: 704px;
+    height: 660px;
     width: 55%;
     position: relative; 
 }
@@ -9,7 +9,8 @@
     width: 50px;
 }
 
-.call button{    background: none;
+.call button{    
+    background: none;
     border: none;
     cursor: pointer;
     display: flex;
@@ -84,3 +85,9 @@
     width: 65px;
     cursor: pointer;
 }
+
+.msg {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 500px;
+  }
