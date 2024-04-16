@@ -4,8 +4,7 @@ import './sent.css'
 const sent = () => {
   return (
     <div className='sent'>
-<div className="sent-msg">
-    lorem
+<div className="sent-msg">Hello
 </div>
 <div className="sent-time">
     9:19 pm

@@ -42,44 +42,18 @@ const middlebar = () => {
 
 <div className="msg">
   <Sent/>
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
-  <Recieved/> 
+  <Recieved/>
+  <Recieved/>
+  <Recieved/>
+  <Recieved/>
+  <Recieved/>
+  <Recieved/>
+  <Recieved/>
+  <Recieved/>
+  <Recieved/>
+  <Recieved/>
+  <Recieved/>
+  <Recieved/>
 </div>
 
 <div className="msg-box">
