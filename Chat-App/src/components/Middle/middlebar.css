@@ -43,25 +43,24 @@
     min-height: 45px;
     border: none;
     border-radius: 10px;
-    width: 95%;
+    width: 76%;
     background-color: #16171b;
     padding: 5px 5px 5px 18px;
     color: white;
+    word-wrap: break-word;
+    padding-right: 10.4rem;
 }
 
 .msg-box{
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     position: absolute;
     bottom: 0;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.mainmid :nth-child(6){
+.msg-form .sendbtn{
     background-color: #656a7f;
     border: none;
     border-radius: 5px;
@@ -74,7 +73,7 @@
     font-size: 15px;
 }
 
-.mainmid :nth-child(5){
+.msg-form .attachment-button{
     background-color: #656a7f;
     border: none;
     border-radius: 5px;

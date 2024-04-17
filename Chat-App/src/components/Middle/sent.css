@@ -15,11 +15,10 @@
 .sent-msg{
     background-color: rgba(65, 131, 215, 1);
     min-width: 30px;
-    max-width: 60%;
+    max-width: 500px;
     border-radius: 10px;
-    display: flex;
-    justify-content: center;
     padding: 8px;
     margin-right: 20px;
     font-size: medium;
+    word-wrap: break-word;
 }
