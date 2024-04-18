@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./middlebar.css";
 import Sent from './sent'
 import Recieved from './recieved'
 
 const middlebar = () => {
+  const [inputValue, setInputValue] = useState('');
+  const [message, setMessage] = useState('');
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const sendMessage = () => {
+    setMessage(inputValue);
+    setInputValue(''); // Clear the input field after sending
+  };
+
   return (
     <div className="mainmid">
       <div className="heading">
@@ -35,25 +46,28 @@ const middlebar = () => {
         </div>
       </div>
 
-<div className="border">
-  <span></span>
-</div>
+      <div className="border">
+        <span></span>
+      </div>
 
 
-<div className="msg">
-  <Recieved/>
-  <Sent/>
-</div>
-<form className="msg-form" action="post">
-<div className="msg-box">
-    <input placeholder="Type a message here...">
-    </input>
-    </div>
-<button className="attachment-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-    <path d="M5.82338 12L4.27922 10.4558C2.57359 8.75022 2.57359 5.98485 4.27922 4.27922C5.98485 2.57359 8.75022 2.57359 10.4558 4.27922L19.7208 13.5442C21.4264 15.2498 21.4264 18.0152 19.7208 19.7208C18.0152 21.4264 15.2498 21.4264 13.5442 19.7208L10.0698 16.2464C9.00379 15.1804 9.00379 13.4521 10.0698 12.386C11.1358 11.32 12.8642 11.32 13.9302 12.386L15.8604 14.3162" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-</svg></button>
-   <button className="sendbtn" type="submit">Send</button>
-    </form>
+      <div className="msg">
+        <Recieved />
+        <Sent 
+          msg={message}
+        />
+      </div>
+      <form className="msg-form" action="post">
+        <div className="msg-box">
+          <input type="text" placeholder="Type a message here..." value={inputValue} onChange={handleChange}>
+          </input>
+        </div>
+        <button className="attachment-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+          <path d="M5.82338 12L4.27922 10.4558C2.57359 8.75022 2.57359 5.98485 4.27922 4.27922C5.98485 2.57359 8.75022 2.57359 10.4558 4.27922L19.7208 13.5442C21.4264 15.2498 21.4264 18.0152 19.7208 19.7208C18.0152 21.4264 15.2498 21.4264 13.5442 19.7208L10.0698 16.2464C9.00379 15.1804 9.00379 13.4521 10.0698 12.386C11.1358 11.32 12.8642 11.32 13.9302 12.386L15.8604 14.3162" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg></button>
+        <button className="sendbtn" type="button" onClick={sendMessage}>Send</button>
+      </form>
+      
     </div>
   );
 };

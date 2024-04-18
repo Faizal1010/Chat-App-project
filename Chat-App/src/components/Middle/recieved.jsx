@@ -7,7 +7,7 @@ const recieved = () => {
       <div className="prof-img">
         <img
           src="https://www.shareicon.net/data/512x512/2016/09/15/829459_man_512x512.png" alt=""/>
-        <div className="recieved-msg">I love You</div>
+        <div className="recieved-msg">Hi</div>
       </div>
 
       <div className="sent-time">9:19 pm</div>
