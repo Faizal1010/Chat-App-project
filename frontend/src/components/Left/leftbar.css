@@ -1,17 +1,17 @@
-.left{
+.left {
     width: 23%;
     height: 660px;
     border-radius: 5px;
     background-color: rgba(22, 23, 27, 1);
     padding: 10px;
-}
-
-.logo img{
+  }
+  
+  .logo img {
     width: 8%;
     cursor: pointer;
-}
-
-.search input{
+  }
+  
+  .search input {
     background-color: rgba(35, 36, 42, 1);
     border: none;
     height: 30px;
@@ -21,43 +21,57 @@
     color: white;
     padding: 6px 2px 6px 25px;
     font-size: 16px;
-}
-
-.search{
+  }
+  
+  .search {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.alert-icon {
+  }
+  
+  .alert-icon {
     width: 20px;
     height: 20px;
   }
   
-.alert{
+  .alert {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-}
-
-.alert span{
+  }
+  
+  .alert span {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.contacts{
+  }
+  
+  .contacts {
     height: 80%;
     overflow: auto;
-}
-
-.contacts::-webkit-scrollbar {
+  }
+  
+  .contacts::-webkit-scrollbar {
     width: 10px;
     height: 10px;
   }
-
- *{
+  
+  * {
     scrollbar-color: #000000 transparent;
     scrollbar-width: thin;
   }
+  
+  .leftbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 105px;
+    margin-right: 120px;
+  }
+  
+  .bg-text {
+    font-size: 100px;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
