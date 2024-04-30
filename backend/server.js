@@ -19,7 +19,7 @@ app.get('/',(req,res)=>{
 
 app.use('/api/auth',AuthRoute)
 app.use('/api/messages',MessagesRoute)
-app.use('/api/user',UserRoute)
+app.use('/api/users',UserRoute)
 // app.get('/:hero',(req,res)=>{
 //   res.send(`${req.params.hero}'s page`);
 // })

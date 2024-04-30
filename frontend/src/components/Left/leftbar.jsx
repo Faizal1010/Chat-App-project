@@ -4,6 +4,7 @@ import "./leftbar.css";
 import NameCard from "./nameCard";
 import Typed from 'typed.js';
 import { useEffect } from "react";
+import useGetConversations from "../../hooks/useGetConversations";
 
 
 const leftbar = () => {
@@ -29,7 +30,8 @@ const leftbar = () => {
       typeData2.destroy();
     };
   }, []);
-  
+  const { loading, conversations } = useGetConversations();
+  // console.log(conversations)
 
   return (
     <div className="leftbar">
@@ -63,7 +65,13 @@ const leftbar = () => {
         </div>
 
         <section className="contacts">
-          <NameCard />
+        {conversations.map((conversation, idx) => (
+				<NameCard
+					key={conversation._id}
+					conversation={conversation}
+          lastIdx={idx === conversations.length - 1}
+				/>
+			))}
         </section>
         
       </div>

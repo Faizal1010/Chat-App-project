@@ -1,3 +1,10 @@
+.middlebar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 105px;
+    margin-right: 120px;
+}
 .mainmid{
     height: 660px;
     width: 55%;
