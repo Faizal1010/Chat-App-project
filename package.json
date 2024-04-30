@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Aqib-Ali08/Chat-App#readme",
   "dependencies": {
+    "@material-ui/icons": "^4.11.3",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.4.5",

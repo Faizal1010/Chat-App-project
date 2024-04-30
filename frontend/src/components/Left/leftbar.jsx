@@ -1,14 +1,42 @@
-import React from "react";
 import viteLogo from "../../../public/vite.svg";
 import reactLogo from "../../assets/react.svg";
 import "./leftbar.css";
 import NameCard from "./nameCard";
+import Typed from 'typed.js';
+import { useEffect } from "react";
+
 
 const leftbar = () => {
+  useEffect(() => {
+    const typeData1 = new Typed(".big-title", {
+      strings: ["Chat-APP"],
+      loop: false,
+      typeSpeed: 100,
+      backSpeed: 0,
+      backDelay: 0,
+      showCursor: false,
+    });
+    const typeData2 = new Typed(".small-title", {
+      strings: ["Chat-APP"],
+      loop: false,
+      typeSpeed: 100,
+      backSpeed: 0,
+      backDelay: 0,
+      showCursor: false,
+    });
+    return () => {
+      typeData1.destroy();
+      typeData2.destroy();
+    };
+  }, []);
+  
+
   return (
+    <div className="leftbar">
       <div className="left">
         <div className="logo">
-        <h2>Chat-APP</h2>
+        {/* <NavLink to="/">Chat-APP</NavLink> */}
+        <h2 className="small-title"></h2>
         </div>
 
         <div className="search">
@@ -26,7 +54,7 @@ const leftbar = () => {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              class="alert-icon"
+              className="alert-icon"
             >
               <circle cx="12" cy="12" r="6"></circle>
             </svg>
@@ -37,6 +65,11 @@ const leftbar = () => {
         <section className="contacts">
           <NameCard />
         </section>
+        
+      </div>
+      <div className="bg-text">
+      <h1 className="big-title"></h1>
+    </div>
       </div>
   );
 };
