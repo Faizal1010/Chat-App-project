@@ -7,7 +7,7 @@ import cookieParser from 'cookie-parser'
 import path from 'path'
 import connectToMongoDB from './db/connectToMongoDB.js'
 const app = express()
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 dotenv.config();
 app.use(express.json());
 app.use(cookieParser());

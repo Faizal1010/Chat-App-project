@@ -1,7 +1,7 @@
 import React from 'react'
-import Leftbar from './Left/leftbar'
-import Middlebar from './Middle/middlebar.jsx'
-import Rightbar from './Right/rightbar.jsx'
+import Leftbar from '../../components/Left/leftbar.jsx'
+import Middlebar from '../../components/Middle/middlebar.jsx'
+import Rightbar from '../../components/Right/rightbar.jsx'
 import './homepage.css'
 
 const homepage = () => {
