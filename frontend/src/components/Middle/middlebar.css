@@ -2,6 +2,7 @@
     height: 660px;
     width: 55%;
     position: relative; 
+    display:none;
 }
 
 .heading img{
@@ -25,6 +26,14 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 20px;
+    transition: all 1s ease;
+}
+
+.heading span:hover{
+    transform: scale(1.2);
+    transition: transform 0.2s ease;
+    text-decoration: underline;
+    color: white;
 }
 
 .border span{
@@ -52,9 +61,6 @@
 }
 
 .msg-box{
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -71,6 +77,14 @@
     width: 65px;
     cursor: pointer;
     font-size: 15px;
+}
+
+.msg-form button{
+    transition:all 0.3s ease ;
+}
+
+.msg-form button:hover{
+    background-color: rgba(72, 106, 190, 0.533);
 }
 
 .msg-form .attachment-button{
@@ -90,3 +104,14 @@
     overflow-x: hidden;
     max-height: 500px;
   }
+
+.call{
+    transition: transform 0.2s ease;
+}
+
+.call:hover{
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+    transform: scale(1.1);
+}
