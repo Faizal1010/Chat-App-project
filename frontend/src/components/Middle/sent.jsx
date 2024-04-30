@@ -1,30 +1,24 @@
-import React, { useState, useEffect }  from 'react'
+import { useAuthContext } from "../../context/AuthContext";
+import { extractTime } from "../../utils/extractTime";
+import useConversation from "../../zustand/useConversation";
 import './sent.css'
-import socket from '../../socket'
+import './recieved.css'
 
-const sent = (props) => {
+const sent = ({ message }) => {
+  const { authUser } = useAuthContext();
+	const { selectedConversation } = useConversation();
+	const fromMe = message.senderId === authUser._id;
+	const formattedTime = extractTime(message.createdAt);
 
-  const [message, setMessage] = useState('');
-
-  const handleMessageChange = (e) => {
-    setMessage(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (message.trim() !== '') {
-      socket.emit('chat message', message);
-      console.log(message)
-      setMessage('');
-    }
-  };
+	const chatClassName = fromMe ? "sent" : "recieved";
+	const bubbleBgColor = fromMe ? "sent-msg" : "recieved-msg";
+	const shakeClass = message.shouldShake ? "shake" : "";
 
   return (
-    <div className='sent'>
-      <div className="sent-msg">{props.msg}</div>
-      {/* <div className="sent-msg"></div> */}
+    <div className={`chat ${chatClassName}`}>
+      <div className={`${bubbleBgColor}`}>{message.message}</div>
       <div className="sent-time">
-        9:19 pm
+      {formattedTime}
       </div>
     </div>
   )

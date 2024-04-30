@@ -1,50 +1,38 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./middlebar.css";
 import Sent from './sent'
 import Recieved from './recieved'
-import socket from '../../socket'
+import useConversation from "../../zustand/useConversation";
+import MessageInput from "./messageInput";
+import useGetMessages from "../../hooks/useGetMessages";
+import MessageSkeleton from "../../skeletons/messageSkeletons";
 
 const middlebar = () => {
-
-  const [inputValue, setInputValue] = useState('');
-  const [message, setMessage] = useState('');
-  const handleChange = (event) => {
-    setInputValue(event.target.value);
-  };
-
-  const sendMessage = (e) => {
-    e.preventDefault();
-    if (inputValue.trim() !== '') {
-      socket.emit('chat message', inputValue);
-      setInputValue('');
-    }
-  };
-  
+  const { selectedConversation, setSelectedConversation } = useConversation();
+  // console.log(selectedConversation?.fullName)
   useEffect(() => {
-    const messageSentHandler = () => {
-      setMessage('');
-    };
-  
-    socket.on('messageSent', messageSentHandler);
-  
-    return () => {
-      socket.off('messageSent', messageSentHandler);
-    };
-  }, []);
-  
-  socket.on('chat message', (message) => {
-    
-  });    
-  
-console.log("tools")
+		// cleanup function (unmounts)
+		return () => setSelectedConversation(null);
+	}, [setSelectedConversation]);
+
+
+  const {messages,loading}=useGetMessages();
+  const lastMessageRef = useRef();
+
+	useEffect(() => {
+		setTimeout(() => {
+			lastMessageRef.current?.scrollIntoView({ behavior: "smooth" });
+		}, 100);
+	}, [messages]);
+  // console.log(messages)
   return (
     <div className="mainmid">
       <div className="heading">
         <img
-          src="https://www.shareicon.net/data/512x512/2016/09/15/829459_man_512x512.png"
+          src={selectedConversation?.profilePic}
           alt=""
         />
-        <span>Andrea Mendoza</span>
+        <span>{selectedConversation?.fullName}</span>
         <div className="calls">
           <div className="call">
             <button>
@@ -71,19 +59,19 @@ console.log("tools")
         <span></span>
       </div>
       <div className="msg">
-        <Recieved />
-        <Sent msg={message}/>
+      {!loading &&
+				messages.length > 0 &&
+				messages.map((message) => (
+					<div key={message._id} ref={lastMessageRef}>
+						<Sent message={message} />
+					</div>
+				))}
+      {loading && [...Array(3)].map((_, idx) => <MessageSkeleton key={idx} />)}
+			{!loading && messages.length === 0 && (
+				<p className='text-center'>Send a message to start the conversation</p>
+			)}
       </div>
-      <form className="msg-form" id="form" >
-        <div className="msg-box">
-          <input type="text" placeholder="Type a message here..." value={inputValue} onChange={handleChange}>
-          </input>
-        </div>
-        <button className="attachment-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-          <path d="M5.82338 12L4.27922 10.4558C2.57359 8.75022 2.57359 5.98485 4.27922 4.27922C5.98485 2.57359 8.75022 2.57359 10.4558 4.27922L19.7208 13.5442C21.4264 15.2498 21.4264 18.0152 19.7208 19.7208C18.0152 21.4264 15.2498 21.4264 13.5442 19.7208L10.0698 16.2464C9.00379 15.1804 9.00379 13.4521 10.0698 12.386C11.1358 11.32 12.8642 11.32 13.9302 12.386L15.8604 14.3162" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        </svg></button> 
-        <button className="sendbtn" type="button" onClick={sendMessage}>Send</button>
-      </form>
+      <MessageInput/>
       
     </div>
   );
