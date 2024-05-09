@@ -13,9 +13,9 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path='/' element={<Homepage/>} />
-        <Route path='/login' element={<Login/>} />
-        <Route path='/signup' element={authUser ? <Navigate to='/' /> : <SignUp />} />
+      <Route path='/' element={authUser ? <Homepage /> : <Navigate to={"/login"} />} />
+				<Route path='/login' element={authUser ? <Navigate to='/' /> : <Login />} />
+				<Route path='/signup' element={authUser ? <Navigate to='/' /> : <SignUp />} />
       </Routes>
       <Toaster/>
     </div>

@@ -1,6 +1,7 @@
 import './nameCard.css'
 import React from 'react';
 import useConversation from "../../zustand/useConversation";
+import { useSocketContext } from '../../context/SocketContext';
 
 const nameCard = ({conversation,lastIdx}) => {
   const { selectedConversation, setSelectedConversation } = useConversation();
@@ -12,11 +13,15 @@ const nameCard = ({conversation,lastIdx}) => {
     document.querySelector('.mainmid').style.display = 'flow'
     document.querySelector('.right').style.display = 'flow'
   }
-
+  const { onlineUsers } = useSocketContext();
+  const isOnline = onlineUsers.includes(conversation._id);
+  
   return (<div>
       <div className={`NameCard  ${isSelected ? "selected" : ""}`} onClick={() => {setSelectedConversation(conversation);handleClick()}}>
         <div className="pic">
+        <div className={`${isOnline ? "online" : ""}`}></div>
           <img src={conversation.profilePic} alt="" />
+          
         </div>
         <div className="content">
           <div className="info">

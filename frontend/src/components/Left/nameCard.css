@@ -5,11 +5,11 @@
   justify-content: center;
   /* transition: background-color 1s ease; */
   border-radius: 10px;
-cursor: pointer;
+  cursor: pointer;
 }
 
-.NameCard:hover{
-background-color: rgb(66, 64, 64);
+.NameCard:hover {
+  background-color: rgb(66, 64, 64);
 
 }
 
@@ -30,18 +30,32 @@ background-color: rgb(66, 64, 64);
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.info h4{
+
+.info h4 {
   font-size: 18px;
 }
 
 .time {
   flex-shrink: 0;
 }
-.selected{
+
+.selected {
   background-color: rgb(66, 64, 64);
 }
-.divider{
+
+.divider {
   height: 1px;
   padding: 0px;
   background-color: rgb(219, 220, 221);
+}
+
+.online {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: green;
+  border-radius: 50%;
+  position: absolute;
+
 }
